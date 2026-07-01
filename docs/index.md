@@ -1,17 +1,28 @@
-# Welcome to MkDocs
+# 歡迎來到我的學習筆記
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+這是一個使用 **MkDocs + GitHub Pages** 建立的靜態網站。
 
-## Commands
+## 這個網站包含什麼？
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+- 🚀 [快速開始](getting-started.md) — 如何建立你自己的 GitHub Pages
+- 📚 [進階用法](advanced.md) — YAML front matter 與進階 Markdown 語法
 
-## Project layout
+## 如何運作？
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+```mermaid
+graph LR
+    A[撰寫 Markdown] --> B[推送到 GitHub]
+    B --> C[GitHub Actions 自動編譯]
+    C --> D[發布為網頁]
+```
+
+!!! tip "小提示"
+    每次你推送程式碼到 `main` 分支，網站就會自動更新！
+
+## 快速連結
+
+| 資源 | 說明 |
+|------|------|
+| [MkDocs 文件](https://www.mkdocs.org) | 官方文件 |
+| [Material 主題](https://squidfunk.github.io/mkdocs-material/) | 本站使用的主題 |
+| [Markdown 語法](https://www.markdownguide.org/) | Markdown 完整指南 |

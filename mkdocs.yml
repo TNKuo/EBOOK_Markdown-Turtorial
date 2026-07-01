@@ -1,1 +1,43 @@
-site_name: My Docs
+site_name: GitHub Copilot 學習筆記
+site_url: https://tnkuo.github.io/EBOOK_test/
+site_description: 使用 GitHub Pages 發布的學習網站
+
+theme:
+  name: material
+  language: zh-TW
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: 切換到深色模式
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 切換到淺色模式
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - search.suggest
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - 首頁: index.md
+  - 快速開始: getting-started.md
+  - 進階用法: advanced.md
