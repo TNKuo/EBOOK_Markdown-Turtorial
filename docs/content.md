@@ -1,3 +1,0 @@
-## ANSYS
-
-==="Main text"
