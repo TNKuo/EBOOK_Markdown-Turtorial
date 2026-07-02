@@ -15,12 +15,30 @@ my-repo/
     └── workflows/
         └── deploy.yml  # 自動部署設定
 ```
+!!! note "注意事項"
+
+    為什麼 publish*.yml 檔案到 GitHub 需要再創建一個 `.github/workflows` 資料夾然後裡面再放一個 `*.yml` 檔案？
+
+    Ans:
+
+    1. 原因很簡單：這是 GitHub 的平台規則，那個 yml 不是「要被發佈到 GitHub Pages 的內容」，而是「叫 GitHub 幫你自動做事的設定檔」，是 GitHub Actions 的約定路徑。GitHub 只會到固定位置找這種設定，所以必須放在 `.github/workflows/` 底下。
+
+    2. 資料夾位置不能亂放。GitHub Actions 只會辨識 `.github/workflows/` 裡面的 `.yml` 或 `.yaml`。如果你放在專案根目錄、docs 或寫成 `.github/workflow/`（單數），GitHub 都不會把它當成 workflow。
+
+    3. 可以把它理解成：
+
+        - 網站內容：放在 `docs/` 或 build 後的 `site/`
+        - GitHub Actions：放在 `.github/workflows/`
+
+        GitHub 只會去固定的地方找自動化腳本。
+
 
 ## 步驟二：撰寫 Markdown
 
 每個 `.md` 檔案就是一個網頁。使用標準 Markdown 語法：
 
 ```markdown
+
 # 標題
 
 這是一段文字，支援 **粗體**、*斜體*、`程式碼`。
@@ -34,6 +52,8 @@ my-repo/
 |--------|--------|
 | 值 1   | 值 2   |
 ```
+!!! note "注意事項"
+    關於Markdown語法可以參考 [Markdown入門語法](<https://vocus.cc/article/68efa7c1fd89780001a99c46>)
 
 ## 步驟三：設定 `mkdocs.yml`
 
@@ -52,10 +72,11 @@ nav:                    # 導覽列
   - 關於: about.md
 ```
 ## 步驟四：連接 GitHub 並上傳檔案
+
 1. 到 VS Code 的終端機
 2. 輸入指令
-=="python"
-'''
+
+```bash
 # 1. 先 cd 到你想放專案的資料夾
 cd C:\Users\tsungnan\Projects
 
@@ -65,20 +86,23 @@ git clone https://github.com/TNKuo/EBOOK_test.git
 # 3. 進入專案資料夾
 cd EBOOK_test
 
-3. 修改檔案後上傳，輸入:
-      # 1. 查看哪些檔案有改動
-    git status
+```
 
-    # 2. 加入所有改動的檔案
-    git add .
+3. 修改檔案後上傳，輸入：
 
-    # 3. 建立存檔點（寫下你改了什麼）
-    git commit -m "新增首頁內容"
+```bash
+# 1. 查看哪些檔案有改動
+git status
 
-    # 4. 上傳到 GitHub
-    git push
+# 2. 加入所有改動的檔案
+git add .
 
-'''
+# 3. 建立存檔點（寫下你改了什麼）
+git commit -m "新增首頁內容"
+
+# 4. 上傳到 GitHub
+git push
+```
 
 
 ## 步驟五：設定 GitHub Actions 自動部署
@@ -94,3 +118,24 @@ cd EBOOK_test
 
 !!! success "完成！"
     你的網站會在 `https://<username>.github.io/<repo>/` 上線。
+
+
+## 步驟七：更新 GitHub Pages
+
+1. 修改內容後，可以用下面指令預覽網頁。
+```yaml
+mkdocs serve
+```
+2. 修改完後，至修改後的資料夾，例如:D:\VScode\EBook_Markdown
+3. 鍵入下面程式碼：
+```bash
+# 1. 加入所有改動的檔案
+git add .
+
+# 2. 建立存檔點（寫下你改了什麼）
+git commit -m "新增首頁內容"
+
+# 3. 上傳到 GitHub
+git push
+```
+3. 至Github 的Repository選擇分支再合併入Main。
