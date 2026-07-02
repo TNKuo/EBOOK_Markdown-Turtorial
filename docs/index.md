@@ -1,4 +1,4 @@
-# 歡迎來到我的學習筆記
+# 歡迎來到TNKuo學習筆記
 
 這是一個使用 **MkDocs + GitHub Pages** 建立的靜態網站。
 
@@ -26,3 +26,5 @@ graph LR
 | [MkDocs 文件](https://www.mkdocs.org) | 官方文件 |
 | [Material 主題](https://squidfunk.github.io/mkdocs-material/) | 本站使用的主題 |
 | [Markdown 語法](https://www.markdownguide.org/) | Markdown 完整指南 |
+| [YML教學1](https://www.youtube.com/watch?v=DeZjkCtttss&t=381s) | YML 建立教學 |
+| [YML教學2](https://www.youtube.com/watch?v=xlABhbnNrfI) | YML 建立教學 |
