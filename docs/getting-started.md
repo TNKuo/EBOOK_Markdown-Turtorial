@@ -1,4 +1,4 @@
-# 快速開始：建立 GitHub Pages 網站
+# MkDocs 教學：建立 GitHub Pages 網站
 
 ## 步驟一：建立檔案結構
 
@@ -53,7 +53,7 @@ my-repo/
 | 值 1   | 值 2   |
 ```
 !!! note "注意事項"
-    關於Markdown語法可以參考 [Markdown入門語法](<https://vocus.cc/article/68efa7c1fd89780001a99c46>)
+    關於Markdown語法，可以參考 [Markdown入門語法](<https://vocus.cc/article/68efa7c1fd89780001a99c46>)
 
 ## 步驟三：設定 `mkdocs.yml`
 
@@ -90,20 +90,50 @@ cd EBOOK_test
 
 3. 修改檔案後上傳，輸入：
 
+
 ```bash
-# 1. 查看哪些檔案有改動
-git status
+    # 1. 查看哪些檔案有改動
+    git status
 
-# 2. 加入所有改動的檔案
-git add .
+    # 2. 加入所有改動的檔案 (「把目前資料夾內所有我要提交的變更，先放到待出貨區（Staging Area）。」)(其中 .代表目前資料夾的意思。)
+    git add .
 
-# 3. 建立存檔點（寫下你改了什麼）
-git commit -m "新增首頁內容"
+    # 3. 建立存檔點（寫下你改了什麼）(其中 -m 是 message（提交訊息） 的意思。)
+    git commit -m "新增首頁內容"
 
-# 4. 上傳到 GitHub
-git push
+    # 4. 上傳到 GitHub
+    git push
 ```
+或是
+```bash
+    # 1.把目前所有變更加入暫存區（包含新增、修改、刪除檔案）。你剛剛選「全部一起推（包含刪除與 site）」，所以用 -A 最符合。
+    git add -A
 
+    # 2.建立一個提交（commit），把剛才暫存的內容打包成一個版本。
+    -m 後面是這次變更的說明文字。
+    git commit -m "..."
+    
+    # 3.把本地 main 分支的最新 commit 推到遠端 origin（GitHub）。
+    git push origin main
+    
+!!! note "Git 會自己辨認上傳的repositories嗎?"
+    重點是這三層：
+
+    你目前在哪個 git 專案資料夾
+    Git 先看當前路徑（或其上層）有沒有 .git，這決定是「哪個本地 repository」。
+
+    你 push 的 remote 名稱
+    例如 git push origin main 裡的 origin，會對應到一個遠端 URL。
+
+    分支對應（tracking）
+    如果你只打 git push，Git 會用目前分支追蹤的遠端分支（若已設定）。
+
+    可以用這幾個指令確認，不會推錯：
+    ```bash
+    git rev-parse --show-toplevel
+    git remote -v
+    git branch -vv
+    ```
 
 ## 步驟五：設定 GitHub Actions 自動部署
 

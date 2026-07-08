@@ -1,4 +1,4 @@
-site_name: GitHub Copilot 學習筆記
+site_name: TNKuo GitHub 學習筆記
 site_url: https://tnkuo.github.io/EBOOK_test/
 site_description: 使用 GitHub Pages 發布的學習網站
 
@@ -39,5 +39,5 @@ markdown_extensions:
 
 nav:
   - 首頁: index.md
-  - 快速開始: getting-started.md
-  - 進階用法: advanced.md
+  - MkDocs 建立教學: getting-started.md
+  - MkDocs 進階用法: advanced.md

@@ -4,8 +4,8 @@
 
 ## 這個網站包含什麼？
 
-- 🚀 [快速開始](getting-started.md) — 如何建立你自己的 GitHub Pages
-- 📚 [進階用法](advanced.md) — YAML front matter 與進階 Markdown 語法
+- 🚀 [MkDocs 建立教學](getting-started.md) — 如何建立你自己的 GitHub Pages
+- 📚 [MkDocs 進階用法](advanced.md) — YAML front matter 與進階 Markdown 語法
 
 ## 如何運作？
 
