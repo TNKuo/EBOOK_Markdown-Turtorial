@@ -1,6 +1,8 @@
 site_name: TNKuo GitHub 學習筆記
-site_url: https://tnkuo.github.io/EBOOK_test/
+site_url: https://tnkuo.github.io/EBOOK_Markdown-Turtorial/
 site_description: 使用 GitHub Pages 發布的學習網站
+repo_url: https://eemans-organization.gitbook.io/appendix-of-eeman
+repo_name: 前往 EEMan 筆記
 
 theme:
   name: material
@@ -20,16 +22,32 @@ theme:
         name: 切換到淺色模式
   features:
     - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.sections
+    - navigation.expand
+    - navigation.tracking
+    - navigation.footer
     - toc.integrate
+    - toc.follow
     - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - navigation.top
 
 plugins:
-  - search
+  - search:
+      lang:
+        - zh
+        - en
 
 markdown_extensions:
   - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.details
   - pymdownx.highlight
+  - pymdownx.inlinehilite
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
