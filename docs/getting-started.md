@@ -115,6 +115,7 @@ cd EBOOK_test
     
     # 3.把本地 main 分支的最新 commit 推到遠端 origin（GitHub）。
     git push origin main
+```
     
 !!! note "Git 會自己辨認上傳的repositories嗎?"
     重點是這三層：
