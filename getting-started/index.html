@@ -705,23 +705,8 @@ git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </sp
 git<span class="w"> </span>push
 </code></pre></div></li>
 <li>至Github 的Repository選擇分支再合併入Main。</li>
+<li>或是直接使用 "mkdocs gh-deploy --clean" 指令</li>
 </ol>
-<p>!!! Note: "mkdocs gh-deploy --clean"</p>
-<div class="highlight"><pre><span></span><code>```
-mkdocs gh-deploy --clean
-```
-這個指令會改動並推送 gh-pages 分支，不是你目前開發分支。
-常見使用時機：
-你改了 getting-started.md 或 mkdocs.yml 後要上線。
-線上看到舊內容，想強制用乾淨產物重發一次。
-標準流程：
-```
-git add -A
-git commit -m &quot;update docs&quot;
-git push origin tsungnan-snps-github-pages-setup
-mkdocs gh-deploy --clean
-```
-</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">mkdocs gh-deploy --clean</p>
 <p><div class="highlight"><pre><span></span><code>mkdocs gh-deploy --clean
@@ -731,7 +716,7 @@ mkdocs gh-deploy --clean
 你改了 getting-started.md 或 mkdocs.yml 後要上線。
 線上看到舊內容，想強制用乾淨產物重發一次。
 標準流程：
-<div class="highlight"><pre><span></span><code>git add -A
+<div class="highlight"><pre><span></span><code>git add .
 git commit -m &quot;update docs&quot;
 git push origin tsungnan-snps-github-pages-setup
 mkdocs gh-deploy --clean
