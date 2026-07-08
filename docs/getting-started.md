@@ -170,3 +170,19 @@ git commit -m "新增首頁內容"
 git push
 ```
 3. 至Github 的Repository選擇分支再合併入Main。
+
+!!! Note:
+    ```
+    mkdocs gh-deploy --clean
+    ```
+    這個指令會改動並推送 gh-pages 分支，不是你目前開發分支。
+    常見使用時機：
+    你改了 getting-started.md 或 mkdocs.yml 後要上線。
+    線上看到舊內容，想強制用乾淨產物重發一次。
+    標準流程：
+    ```
+    git add -A
+    git commit -m "update docs"
+    git push origin tsungnan-snps-github-pages-setup
+    mkdocs gh-deploy --clean
+    ```
