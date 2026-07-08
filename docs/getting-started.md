@@ -171,7 +171,7 @@ git push
 ```
 3. 至Github 的Repository選擇分支再合併入Main。
 
-!!! Note:
+!!! Note: "mkdocs gh-deploy --clean"
     ```
     mkdocs gh-deploy --clean
     ```
